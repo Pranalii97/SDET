@@ -1,0 +1,36 @@
+//Using Selenium Java for automation
+//Add selenium jar file to the project
+//Add Chromedriver
+//We'll use Locator "id" for Login==>
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class OpeningUrl 
+{
+
+	public static void main(String[] args) 
+	
+  {
+  
+		System.setProperty("webdriver.chrome.driver", "C:\\Selenium\\Driver\\chromedriver.exe");
+		
+		WebDriver wd = new ChromeDriver();
+		
+		wd.get("https://www.saucedemo.com/");
+		
+		wd.manage().window().maximize();
+		
+		wd.findElement(By.id("user-name")).sendKeys("standard_user");
+		wd.findElement(By.id("password")).sendKeys("secret_sauce");
+		wd.findElement(By.id("login-button")).click();
+	}
+
+}
+
+
+
+
+
+
