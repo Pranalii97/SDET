@@ -1,0 +1,35 @@
+# SDET
+
+//Open the URL in Browser==>
+//Using Selenium Java
+//First add selenium jar file to the project
+//add chromedriver
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class OpeningUrl 
+{
+	
+
+	public static void main(String[] args) 
+	{
+		System.setProperty("webdriver.chrome.driver", "C:\\Selenium\\Driver\\chromedriver.exe");
+		
+		WebDriver wd = new ChromeDriver();
+		
+		wd.get("https://www.saucedemo.com/");
+		
+		wd.manage().window().maximize();
+    
+    }
+    
+    }
+
+
+
+
+
+
+
